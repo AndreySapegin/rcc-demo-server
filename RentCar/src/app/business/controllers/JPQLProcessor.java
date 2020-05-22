@@ -42,11 +42,12 @@ public class JPQLProcessor {
 			+ "<DIV>#result</DIV>"
 			+ "</BODY></HTML>";
 	
+
 	@SuppressWarnings("unchecked")
 	@PostMapping("query")
 	public String queryRequest(@NotBlank @RequestBody String str) {
 		var emQuery = em.createQuery(str);
-		var<?> rowQuery = emQuery.getResultList();
+		var rowQuery = emQuery.getResultList();
 		String result= "- Empty -";
 		if (rowQuery.size() == 0) return result;
 		if (rowQuery.get(0).getClass().isArray()) {
