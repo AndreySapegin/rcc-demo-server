@@ -11,6 +11,13 @@
         <version>3.8.0</version>
         <configuration>
           <release>11</release>
+	        <archive>
+	          <manifest>
+	            <addClasspath>true</addClasspath>
+	            <classpathPrefix>lib/</classpathPrefix>
+	            <mainClass>app.RentCarApp</mainClass>
+	          </manifest>
+	        </archive>          
         </configuration>
       </plugin>
     </plugins>
